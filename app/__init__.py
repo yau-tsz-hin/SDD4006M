@@ -1,12 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
-#___________________________________
 
 @app.route('/')
 def index():
-    return 'Hello, Flask!'
+    return render_template('home.html')
 
+# You can define additional routes and view functions here.
 
-# You must keep the routes at the end.
-from app import routes, errors
+if __name__ == '__main__':
+    app.run()
