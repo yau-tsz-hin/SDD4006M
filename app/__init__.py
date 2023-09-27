@@ -6,7 +6,5 @@ app = Flask(__name__)
 def index():
     return render_template('home.html')
 
-# You can define additional routes and view functions here.
-
-if __name__ == '__main__':
-    app.run()
+# You must keep the routes at the end.
+from app import routes, errors
